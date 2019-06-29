@@ -42,6 +42,7 @@ public class ActivationContext {
 
 	public void setAbly(AblyRest ably) {
 		this.ably = ably;
+		this.clientId = ably.auth.clientId;
 	}
 
 	AblyRest getAbly() throws AblyException {

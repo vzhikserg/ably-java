@@ -45,10 +45,12 @@ public class AblyRest extends AblyBase {
 	 * clientId set by late initialisation
 	 */
 	protected void onClientIdSet(String clientId) {
-		try {
-			push.getActivationContext().setClientId(clientId);
-		} catch(AblyException ae) {
+		if(platform.hasApplicationContext() && push != null) {
+			try {
+				push.getActivationContext().setClientId(clientId);
+			} catch(AblyException ae) {
 
+			}
 		}
 	}
 
