@@ -5,10 +5,10 @@ on:
       - main
 
 jobs:
-  checks:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - uses: actions/setup-java@v1
         with:
@@ -21,3 +21,5 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
 
       - run: ./gradlew checkstyleMain
+
+      - run: ./gradlew java:runUnitTests
