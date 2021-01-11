@@ -25,3 +25,5 @@ jobs:
       - run: ./gradlew checkstyleMain
 
       - run: ./gradlew java:runUnitTests
+
+      - run: ./gradlew java:testRestSuite
