@@ -1473,6 +1473,7 @@ public class RealtimePresenceTest extends ParameterizedTest {
      *
      * @throws AblyException
      */
+    @Ignore("FIXME: flaky test")
     @Test
     public void realtime_presence_subscribe_all() throws AblyException {
         /* Ably instance that will emit presence events */
